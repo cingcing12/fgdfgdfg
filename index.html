@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css.css">
+
+</head>
+<body data-bs-theme="dark">
+    
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a href="index.html" class="nav-link nav-brand fs-2">Logo</a>
+            <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="offcanvas offcanvas-start" id="offcanvas">
+                <div class="offcanvas-header">
+                    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 gap-2 align-items-lg-center">
+                        <li class="nav-item"><a href="index.html" class="nav-link"><i class="bi bi-house-door"></i> Home</a></li>
+                        <li class="nav-item"><a href="" class="nav-link"><i class="bi bi-file-person"></i> About</a></li>
+                        <li class="nav-item profileBtn"><a href="#" class="nav-link"><img src="" alt="Profile" id="profileImage"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- profile container start -->
+     <div class="profile shadow-lg rounded-3 border border-light" data-bs-theme="dark">
+
+        <div class="containerMenuLogout">
+            <i class="bi bi-three-dots-vertical"></i>
+
+            <div class="containeLogoutContent" data-bs-theme="dark">
+                <button class="btnLogout btn"><i class="bi bi-box-arrow-right"></i> Logout</button>
+            </div>
+        </div>
+
+        <form action="#" id="containerImg" class="d-flex flex-column align-items-center gap-2">
+            <img src="" alt="Profile image" class="imgProfile" style="border-radius: 50%; object-fit: cover;" width="150px" height="150px">
+            <div class="containerInputImage">
+                <input type="file" required id="imgInput" accept="*">
+            </div>
+            <button type="submit" class="btn btn-outline-primary"><i class="bi bi-pencil"></i> Update profile</button>
+        </form>
+        <div class="contentProfile">
+            <div class="emailContent"></div>
+        </div>
+     </div>
+    <!-- profile container end -->
+
+    
+
+    <!-- checkLogin js  -->
+
+    <script type="module" src="checkLogin.js"></script>
+
+    <!-- update profile js  -->
+
+    <script type="module" src="updateProfile.js"></script>
+</body>
+</html>

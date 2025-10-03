@@ -11,6 +11,8 @@ const checkLogin = async () => {
 
         document.querySelector("#profileImage").src = `${message.userdata.image}`;
         document.querySelector(".imgProfile").src = `${message.userdata.image}`;
+        document.querySelector('#userName').textContent = `User name: ${message.userdata.name}`;
+        document.querySelector('#userEmail').textContent = `User email: ${message.userdata.email}`;
         console.log(message)
     } catch (err) {
         Swal.fire({

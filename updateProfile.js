@@ -4,8 +4,12 @@ const containerImg = document.querySelector("#containerImg");
 const imgProfile = document.querySelector(".imgProfile");
 const imgInput = document.getElementById("imgInput");
 const btnLogout = document.querySelector(".btnLogout");
-const containerMenuLogout = document.querySelector('.containerMenuLogout');
-const containeLogoutContent = document.querySelector('.containeLogoutContent');
+const containerMenuLogout = document.querySelector(".containerMenuLogout");
+const containeLogoutContent = document.querySelector(".containeLogoutContent");
+const profileBtn = document.querySelector(".profileBtn");
+const profile = document.querySelector(".profile");
+const overlayProfile = document.querySelector(".overlayProfile");
+const concelProfile = document.querySelector(".concelProfile");
 
 let selectedFile = null;
 
@@ -66,18 +70,18 @@ containerImg.addEventListener("submit", async (e) => {
   }
 });
 
-containerMenuLogout.addEventListener('click', (e) => {
-    e.stopPropagation()
-    containeLogoutContent.classList.toggle('active');
+containerMenuLogout.addEventListener("click", (e) => {
+  e.stopPropagation();
+  containeLogoutContent.classList.toggle("active");
 
-    containeLogoutContent.addEventListener('click', (e) => {
-        e.stopPropagation();
-    })
+  containeLogoutContent.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
 
-    document.addEventListener('click', () => {
-        containeLogoutContent.classList.remove('active');
-    })
-})
+  document.addEventListener("click", () => {
+    containeLogoutContent.classList.remove("active");
+  });
+});
 
 // logout
 btnLogout.addEventListener("click", async () => {
@@ -128,4 +132,19 @@ btnLogout.addEventListener("click", async () => {
       showConfirmButton: true,
     });
   }
+});
+
+profileBtn.addEventListener("click", (e) => {
+  profile.classList.add("active");
+  overlayProfile.classList.add("active");
+
+  overlayProfile.addEventListener("click", () => {
+    profile.classList.remove("active");
+    overlayProfile.classList.remove("active");
+  });
+
+  concelProfile.addEventListener("click", () => {
+    profile.classList.remove("active");
+    overlayProfile.classList.remove("active");
+  });
 });
